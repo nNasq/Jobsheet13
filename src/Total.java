@@ -18,8 +18,7 @@ public class Total {
 
         int totalRekursif = totalRekursif(data, n);
 
-        System.out.println("Total (iteratif) dari " + n + " angka yang dimasukkan adalah: " + totalIteratif);
-        System.out.println("Total (rekursif) dari " + n + " angka yang dimasukkan adalah: " + totalRekursif);
+        System.out.println("Total dari " + n + " angka yang dimasukkan adalah: " + totalRekursif);
     }
 
     static int totalIteratif(int[] arr) {
