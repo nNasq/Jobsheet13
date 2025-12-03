@@ -14,26 +14,26 @@ public class Total {
             data[i] = sc.nextInt();
         }
 
-        int totalIteratif = hitungIteratif(data);
+        int totalIteratif = totalIteratif(data);
 
-        int totalRekursif = hitungRekursif(data, n);
+        int totalRekursif = totalRekursif(data, n);
 
-        System.out.println("Total dari " + n + " angka yang dimasukkan adalah: " + totalIteratif);
+        System.out.println("Total (iteratif) dari " + n + " angka yang dimasukkan adalah: " + totalIteratif);
+        System.out.println("Total (rekursif) dari " + n + " angka yang dimasukkan adalah: " + totalRekursif);
     }
 
-    static int hitungIteratif(int[] arr) {
+    static int totalIteratif(int[] arr) {
         int total = 0;
-        for (int nilai : arr) {
-            total += nilai;
+        for (int i = 0; i < arr.length; i++) {
+            total += arr[i];
         }
         return total;
     }
 
-    static int hitungRekursif(int[] arr, int n) {
+    static int totalRekursif(int[] arr, int n) {
         if (n == 0) {
             return 0;
-        } else {
-            return arr[n - 1] + hitungRekursif(arr, n - 1);
         }
+        return arr[n - 1] + totalRekursif(arr, n - 1);
     }
 }
